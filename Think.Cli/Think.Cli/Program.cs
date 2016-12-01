@@ -10,6 +10,25 @@ namespace Think.Cli
     {
         static void Main(string[] args)
         {
+
+        }
+
+        static int doubleDigitValue(int digit)
+        {
+
+            int doubleDigit = digit * 2;
+            int sum;
+
+            if (doubleDigit >= 10)
+                sum = 1 + doubleDigit % 10;
+            else
+                sum = doubleDigit;
+
+            return sum;
+        }
+
+        static void ValidateNumber()
+        {
             int digit;
             int checksum = 0;
             int oddLengthChecksum = 0;
@@ -47,19 +66,6 @@ namespace Think.Cli
             else
                 Console.WriteLine("Checksum is not divisible by 10.  Invalid.");
         }
-
-        static int doubleDigitValue(int digit)
-        {
-
-            int doubleDigit = digit * 2;
-            int sum;
-
-            if (doubleDigit >= 10)
-                sum = 1 + doubleDigit % 10;
-            else
-                sum = doubleDigit;
-
-            return sum;
-        }
     }
+
 }
